@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class ManActivity extends AppCompatActivity {
-
+    // Class describes page on one Agent
     static public Men man;
 
     @Override

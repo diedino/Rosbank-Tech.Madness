@@ -66,7 +66,6 @@ public class FragmentId extends Fragment {
         }
         @Override
         protected void onPostExecute(String content) {
-
             contentText=content;
             contentView.setText(content);
             webView.loadData(content, "text/html; charset=utf-8", "utf-8");
@@ -76,6 +75,7 @@ public class FragmentId extends Fragment {
             id.setText("http://sharelink.com");
         }
 
+        //Connecting for server and gets request for referal link
         private String getContent(String path) throws IOException {
             BufferedReader reader=null;
             try {

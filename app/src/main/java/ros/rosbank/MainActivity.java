@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         FragmentId.id = linkText;
 
         //getSupportActionBar().hide();
+        //Custom Action Bar with centring text(this bar can be found in res)
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle("2343");
 
         Button button = (Button)findViewById(R.id.button);
-
+        //event for Share button
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -57,8 +58,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-
+    //moving in navigation bottom
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 

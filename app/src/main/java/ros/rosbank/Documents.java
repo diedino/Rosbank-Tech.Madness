@@ -24,8 +24,8 @@ import org.eazegraph.lib.models.ValueLineSeries;
 
 public class Documents extends AppCompatActivity {
 
-    private Intent intent1;
-    private ActionBar toolbar;
+    private Intent intent1; // intent for moving on new activity
+    private ActionBar toolbar; // own action bar
     TextView bar;
 
     @Override
@@ -37,8 +37,8 @@ public class Documents extends AppCompatActivity {
         getSupportActionBar().setCustomView(R.layout.docsactionbar);
         toolbar = getSupportActionBar();
 
+        //creating Bar Chart and adding some elements
         BarChart mBarChart = (BarChart) findViewById(R.id.barchart);
-
         mBarChart.addBar(new BarModel("Jan",4f, 0xFFE60028));
         mBarChart.addBar(new BarModel("Feb",2f,  0xFFF3B90E));
         mBarChart.addBar(new BarModel("March",8f, 0xFFE2516B));
@@ -47,47 +47,38 @@ public class Documents extends AppCompatActivity {
         mBarChart.addBar(new BarModel("June",  3f,0xFFFFFFFF));
         mBarChart.addBar(new BarModel("July",4f, 0xFFF3B90E));
         mBarChart.addBar(new BarModel("Aug",8f,  0xFF38908C));
-
         mBarChart.startAnimation();
 
+        //Creating Pi Chart and adding elements
         PieChart mPieChart = (PieChart) findViewById(R.id.piechart);
-
         mPieChart.addPieSlice(new PieModel("Business", 40, Color.parseColor("#ADC116")));
         mPieChart.addPieSlice(new PieModel("Mortage", 25, Color.parseColor("#E60028")));
         mPieChart.addPieSlice(new PieModel("Consumer Loan", 35, Color.parseColor("#F3B90E")));
-
         mPieChart.startAnimation();
 
+        //Stack Bar Chart
         StackedBarChart mStackedBarChart = (StackedBarChart) findViewById(R.id.stackedbarchart);
-
         StackedBarModel s1 = new StackedBarModel("12.4");
-
         s1.addBar(new BarModel(5f, 0xFFE60028));
         s1.addBar(new BarModel(6f, 0xFFF3B90E));
         s1.addBar(new BarModel(2f, 0xFFADC116));
-
         StackedBarModel s2 = new StackedBarModel("13.4");
         s2.addBar(new BarModel(5f, 0xFFE60028));
         s2.addBar(new BarModel(2f, 0xFFF3B90E));
         s2.addBar(new BarModel(6f, 0xFFADC116));
-
         StackedBarModel s3 = new StackedBarModel("14.4");
-
         s3.addBar(new BarModel(7f, 0xFFE60028));
         s3.addBar(new BarModel(6f, 0xFFF3B90E));
         s3.addBar(new BarModel(3f, 0xFFADC116));
-
         StackedBarModel s4 = new StackedBarModel("15.4");
         s4.addBar(new BarModel(4f, 0xFFE60028));
         s4.addBar(new BarModel(3f, 0xFFF3B90E));
         s4.addBar(new BarModel(4f, 0xFFADC116));
-
         mStackedBarChart.addBar(s1);
         mStackedBarChart.addBar(s2);
         mStackedBarChart.addBar(s3);
         mStackedBarChart.addBar(s4);
-
-        mStackedBarChart.startAnimation();
+        mStackedBarChart.startAnimation(); // animation which chart is showing
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigationdocs);
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.navigationdocs);
@@ -96,6 +87,7 @@ public class Documents extends AppCompatActivity {
         MenuItem menuItem = menu.getItem(3);
         menuItem.setChecked(true);
 
+        //moving on navigation bottom
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {

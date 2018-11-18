@@ -1,5 +1,6 @@
 package ros.rosbank;
 
+// class describes one agent
 public class Men {
 
     private String name;

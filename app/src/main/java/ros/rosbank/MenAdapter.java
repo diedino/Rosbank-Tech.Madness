@@ -10,13 +10,14 @@ import android.widget.TextView;
 
 import java.util.List;
 
+//Adaptor for showing man
 public class MenAdapter extends ArrayAdapter<Men> {
 
     private LayoutInflater inflater;
     private int layout;
 
     private List<Men> states;
-
+    //Constructor
     public MenAdapter(Context context, int resource, List<Men> states) {
         super(context, resource, states);
         this.states = states;
@@ -24,6 +25,7 @@ public class MenAdapter extends ArrayAdapter<Men> {
         this.inflater = LayoutInflater.from(context);
     }
 
+    //View in list
     public View getView(int position, View convertView, ViewGroup parent) {
 
         View view=inflater.inflate(this.layout, parent, false);
