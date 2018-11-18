@@ -39,22 +39,22 @@ public class Documents extends AppCompatActivity {
 
         BarChart mBarChart = (BarChart) findViewById(R.id.barchart);
 
-        mBarChart.addBar(new BarModel(1f, 0xFF123456));
-        mBarChart.addBar(new BarModel(2f,  0xFF343456));
-        mBarChart.addBar(new BarModel(3f, 0xFF563456));
-        mBarChart.addBar(new BarModel(4f, 0xFF873F56));
-        mBarChart.addBar(new BarModel(5f, 0xFF56B7F1));
-        mBarChart.addBar(new BarModel(6f,  0xFF343456));
-        mBarChart.addBar(new BarModel(7f, 0xFF1FF4AC));
-        mBarChart.addBar(new BarModel(8f,  0xFF1BA4E6));
+        mBarChart.addBar(new BarModel("Jan",4f, 0xFFE60028));
+        mBarChart.addBar(new BarModel("Feb",2f,  0xFFF3B90E));
+        mBarChart.addBar(new BarModel("March",8f, 0xFFE2516B));
+        mBarChart.addBar(new BarModel("April",2f, 0xFF1BA4E6));
+        mBarChart.addBar(new BarModel("May",5f, 0xFF7BAD45));
+        mBarChart.addBar(new BarModel("June",  3f,0xFFFFFFFF));
+        mBarChart.addBar(new BarModel("July",4f, 0xFFF3B90E));
+        mBarChart.addBar(new BarModel("Aug",8f,  0xFF38908C));
 
         mBarChart.startAnimation();
 
         PieChart mPieChart = (PieChart) findViewById(R.id.piechart);
 
-        mPieChart.addPieSlice(new PieModel("Business", 40, Color.parseColor("#FE6DA8")));
-        mPieChart.addPieSlice(new PieModel("Mortage", 25, Color.parseColor("#56B7F1")));
-        mPieChart.addPieSlice(new PieModel("Consumer Loan", 35, Color.parseColor("#CDA67F")));
+        mPieChart.addPieSlice(new PieModel("Business", 40, Color.parseColor("#ADC116")));
+        mPieChart.addPieSlice(new PieModel("Mortage", 25, Color.parseColor("#E60028")));
+        mPieChart.addPieSlice(new PieModel("Consumer Loan", 35, Color.parseColor("#F3B90E")));
 
         mPieChart.startAnimation();
 
@@ -62,25 +62,25 @@ public class Documents extends AppCompatActivity {
 
         StackedBarModel s1 = new StackedBarModel("12.4");
 
-        s1.addBar(new BarModel(5f, 0xFF63CBB0));
-        s1.addBar(new BarModel(6f, 0xFF56B7F1));
-        s1.addBar(new BarModel(2f, 0xFFCDA67F));
+        s1.addBar(new BarModel(5f, 0xFFE60028));
+        s1.addBar(new BarModel(6f, 0xFFF3B90E));
+        s1.addBar(new BarModel(2f, 0xFFADC116));
 
         StackedBarModel s2 = new StackedBarModel("13.4");
-        s2.addBar(new BarModel(5f, 0xFF63CBB0));
-        s2.addBar(new BarModel(2f, 0xFF56B7F1));
-        s2.addBar(new BarModel(6f, 0xFFCDA67F));
+        s2.addBar(new BarModel(5f, 0xFFE60028));
+        s2.addBar(new BarModel(2f, 0xFFF3B90E));
+        s2.addBar(new BarModel(6f, 0xFFADC116));
 
         StackedBarModel s3 = new StackedBarModel("14.4");
 
-        s3.addBar(new BarModel(7f, 0xFF63CBB0));
-        s3.addBar(new BarModel(6f, 0xFF56B7F1));
-        s3.addBar(new BarModel(3f, 0xFFCDA67F));
+        s3.addBar(new BarModel(7f, 0xFFE60028));
+        s3.addBar(new BarModel(6f, 0xFFF3B90E));
+        s3.addBar(new BarModel(3f, 0xFFADC116));
 
         StackedBarModel s4 = new StackedBarModel("15.4");
-        s4.addBar(new BarModel(4f, 0xFF63CBB0));
-        s4.addBar(new BarModel(3f, 0xFF56B7F1));
-        s4.addBar(new BarModel(4f, 0xFFCDA67F));
+        s4.addBar(new BarModel(4f, 0xFFE60028));
+        s4.addBar(new BarModel(3f, 0xFFF3B90E));
+        s4.addBar(new BarModel(4f, 0xFFADC116));
 
         mStackedBarChart.addBar(s1);
         mStackedBarChart.addBar(s2);

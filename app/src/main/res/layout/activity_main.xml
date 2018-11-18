@@ -54,18 +54,18 @@
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto"
             android:lineSpacingExtra="14sp"
             android:text="@string/qr_code"
             android:textAlignment="center"
-            android:textColor="#2D2F38"
-            android:textSize="18sp" />
+            android:textColor="#2D2F88"
+            android:textSize="24sp" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="300dp"
-            android:layout_height="45dp"
+            android:layout_height="55dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:background="@animator/mybuttonred"
@@ -97,7 +97,7 @@
         android:id="@+id/frame_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior" >
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
     </FrameLayout>
 
