@@ -51,13 +51,13 @@
             tools:text="Or send this link" />
 
         <TextView
-            android:id="@+id/textView2"
+            android:id="@+id/shareLink"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto"
             android:lineSpacingExtra="14sp"
-            android:text="@string/qr_code"
+            android:text="---"
             android:textAlignment="center"
             android:textColor="#2D2F88"
             android:textSize="24sp" />
@@ -92,6 +92,12 @@
             app:menu="@menu/navigation"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp" />
+
+        <fragment android:id="@+id/contentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="ros.rosbank.FragmentId" />
+
     </LinearLayout>
 
     <FrameLayout

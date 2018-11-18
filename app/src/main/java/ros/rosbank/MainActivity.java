@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView linkText = (TextView) findViewById(R.id.shareLink);
+        FragmentId.id = linkText;
+
         //getSupportActionBar().hide();
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
@@ -43,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intentInvite = new Intent(Intent.ACTION_SEND);
                 intentInvite.setType("text/plain");
-                TextView tv = (TextView)findViewById(R.id.textView2);
+                TextView tv = (TextView)findViewById(R.id.shareLink);
                 String body = tv.getText()+"";
                 String subject = "Your Subject";
                 intentInvite.putExtra(Intent.EXTRA_SUBJECT, subject);
